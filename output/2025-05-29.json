@@ -1,0 +1,81 @@
+{
+  "date": "2025-05-29",
+  "executive_summary": "Today's AI news highlights OpenAI's collaboration with Wix to launch an AI Website Builder, enabling rapid website creation. Other recent OpenAI announcements include an addendum to their o3 and o4-mini system cards, the opening of OpenAI Deutschland, and the introduction of Stargate UAE, alongside tools like Coderabbit leveraging o3, o4-mini, and GPT-4.1 for faster code shipping.",
+  "stories": [
+    {
+      "id": "15311c4f8d51652c",
+      "title": "Creating websites in minutes with AI Website Builder",
+      "url": "https://openai.com/index/wix",
+      "published_at": "2025-05-29T00:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "product",
+      "summary": "OpenAI has partnered with Wix to introduce an AI Website Builder, allowing users to create functional websites rapidly with AI assistance.",
+      "tags": [
+        "OpenAI",
+        "Wix",
+        "Website Builder",
+        "AI Tools"
+      ]
+    },
+    {
+      "id": "89bffd91b9aebd89",
+      "title": "Addendum to OpenAI o3 and o4-mini system card: OpenAI o3 Operator",
+      "url": "https://openai.com/index/o3-o4-mini-system-card-addendum-operator-o3",
+      "published_at": "2025-05-23T00:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "research",
+      "summary": "OpenAI has released an addendum to their o3 and o4-mini system cards, specifically detailing the functionality and operation of the OpenAI o3 Operator.",
+      "tags": [
+        "OpenAI",
+        "System Card",
+        "o3",
+        "o4-mini"
+      ]
+    },
+    {
+      "id": "262e214eac3fe959",
+      "title": "OpenAI Deutschland",
+      "url": "https://openai.com/index/openai-deutschland",
+      "published_at": "2025-05-22T23:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "policy",
+      "summary": "OpenAI has announced the establishment of its new office, OpenAI Deutschland, marking an expansion of its global presence.",
+      "tags": [
+        "OpenAI",
+        "Germany",
+        "Global Expansion",
+        "Office Opening"
+      ]
+    },
+    {
+      "id": "175f05b6e283a13c",
+      "title": "Shipping code faster with o3, o4-mini, and GPT-4.1",
+      "url": "https://openai.com/index/coderabbit",
+      "published_at": "2025-05-22T10:25:00+00:00",
+      "source": "OpenAI News",
+      "category": "product",
+      "summary": "OpenAI highlights how tools like Coderabbit are leveraging o3, o4-mini, and GPT-4.1 to significantly accelerate the code shipping process for developers.",
+      "tags": [
+        "OpenAI",
+        "Coderabbit",
+        "Code Development",
+        "GPT-4.1"
+      ]
+    },
+    {
+      "id": "92be720c58508912",
+      "title": "Introducing Stargate UAE",
+      "url": "https://openai.com/index/introducing-stargate-uae",
+      "published_at": "2025-05-22T00:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "policy",
+      "summary": "OpenAI has announced the introduction of Stargate UAE, indicating a new initiative or partnership within the United Arab Emirates.",
+      "tags": [
+        "OpenAI",
+        "UAE",
+        "Partnership",
+        "Global Expansion"
+      ]
+    }
+  ]
+}
