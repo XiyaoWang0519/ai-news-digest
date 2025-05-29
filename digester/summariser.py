@@ -15,8 +15,8 @@ from openai import OpenAI
 # OpenRouter setup
 # ------------------------------------------------------------------#
 MODEL = "google/gemini-2.5-flash-preview-05-20"
-MAX_PER_DIGEST = int(os.getenv("MAX_STORIES", 12))
-CHAR_LIMIT      = int(os.getenv("ARTICLE_CHAR_LIMIT", 7000))
+MAX_PER_DIGEST = int(os.getenv("MAX_STORIES", 8))
+CHAR_LIMIT      = int(os.getenv("ARTICLE_CHAR_LIMIT", 5000))
 
 # Jina.ai fallback endpoint
 JINA_ENDPOINT = "https://r.jina.ai/"
@@ -108,11 +108,12 @@ def create_digest(items: List[Dict], date: datetime.date | None = None) -> Dict:
         "messages": [
             {"role": "system",
              "content": "You are an expert AI-news curator. "
-                        "Follow the JSON schema strictly."},
+                        "You MUST produce complete, valid JSON. "
+                        "Do not truncate any fields or strings."},
             {"role": "user", "content": prompt}
         ],
         "response_format": {"type": "json_object"},
-        "max_tokens": 2048,
+        "max_tokens": 4096,
         "temperature": 0.3
     }
     
@@ -127,16 +128,30 @@ def create_digest(items: List[Dict], date: datetime.date | None = None) -> Dict:
 
     # 5 Parse & validate
     try:
-        digest = json.loads(resp_data["choices"][0]["message"]["content"])
+        response_content = resp_data["choices"][0]["message"]["content"]
+        print(f"Response length: {len(response_content)} characters")
+        print(f"Response tokens used: {resp_data.get('usage', {}).get('completion_tokens', 'unknown')}")
+        
+        digest = json.loads(response_content)
         jsonschema.validate(instance=digest, schema=DIGEST_SCHEMA)
         return digest
     except json.JSONDecodeError as e:
         print(f"JSON decode error: {e}")
-        print(f"Response content: {resp_data['choices'][0]['message']['content']}")
+        print(f"Response content length: {len(resp_data['choices'][0]['message']['content'])}")
+        print(f"Last 200 chars: ...{resp_data['choices'][0]['message']['content'][-200:]}")
+        
+        # Try to identify if it's a truncation issue
+        content = resp_data['choices'][0]['message']['content']
+        if not content.rstrip().endswith('}'):
+            print("❌ JSON appears to be truncated (doesn't end with })")
+            print("💡 Try reducing MAX_STORIES or ARTICLE_CHAR_LIMIT")
+        
         raise
     except KeyError as e:
         print(f"Response structure error: {e}")
-        print(f"Full response: {resp_data}")
+        print(f"Full response keys: {resp_data.keys()}")
+        if 'choices' in resp_data:
+            print(f"Choices available: {len(resp_data['choices'])}")
         raise
 
 # ------------------------------------------------------------------#
@@ -173,7 +188,7 @@ def _jina_readable(url: str) -> str:
 def _build_prompt(items: List[Dict], date_str: str) -> str:
     bullet_blocks = []
     for it in items:
-        body_short = textwrap.shorten(it["content"], 700, placeholder="…")  # keep tokens sane
+        body_short = textwrap.shorten(it["content"], 400, placeholder="…")  # Reduced from 700 to 400
         # Generate SHA256 ID for the URL
         url_id = hashlib.sha256(it['url'].encode('utf-8')).hexdigest()[:16]
         bullet_blocks.append(
@@ -187,7 +202,8 @@ def _build_prompt(items: List[Dict], date_str: str) -> str:
         )
     return (
         f"DATE: {date_str}\n\n"
-        "You will produce a JSON object with the following structure:\n"
+        "You will produce a COMPLETE JSON object with the following structure.\n"
+        "IMPORTANT: Ensure all strings are properly closed and the JSON is valid!\n\n"
         "{\n"
         '  "date": "' + date_str + '",\n'
         '  "executive_summary": "2-3 sentences summarizing the key AI developments today",\n'
@@ -200,7 +216,7 @@ def _build_prompt(items: List[Dict], date_str: str) -> str:
         '      "source": "original source",\n'
         '      "category": "one of: product/research/policy/culture/misc",\n'
         '      "summary": "1-2 sentence summary of the story",\n'
-        '      "tags": ["up to 4 relevant tags"]\n'
+        '      "tags": ["up to 3 relevant tags"]\n'  # Reduced from 4 to 3 tags
         '    }\n'
         '  ]\n'
         "}\n\n"

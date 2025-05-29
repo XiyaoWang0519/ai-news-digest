@@ -1,6 +1,6 @@
 {
   "date": "2025-05-29",
-  "executive_summary": "Today's AI news highlights OpenAI's collaboration with Wix to launch an AI Website Builder, enabling rapid website creation. Other recent OpenAI announcements include an addendum to their o3 and o4-mini system cards, the opening of OpenAI Deutschland, and the introduction of Stargate UAE, alongside tools like Coderabbit leveraging o3, o4-mini, and GPT-4.1 for faster code shipping.",
+  "executive_summary": "Today's AI news from OpenAI highlights new product developments, including an AI Website Builder and updates to their o3, o4-mini, and GPT-4.1 models for faster code shipping. There are also announcements about new regional presences in Germany and UAE, and leadership changes with the addition of Fidji Simo.",
   "stories": [
     {
       "id": "15311c4f8d51652c",
@@ -9,12 +9,11 @@
       "published_at": "2025-05-29T00:00:00+00:00",
       "source": "OpenAI News",
       "category": "product",
-      "summary": "OpenAI has partnered with Wix to introduce an AI Website Builder, allowing users to create functional websites rapidly with AI assistance.",
+      "summary": "OpenAI introduces an AI Website Builder, enabling users to create websites rapidly, streamlining the web development process.",
       "tags": [
-        "OpenAI",
-        "Wix",
-        "Website Builder",
-        "AI Tools"
+        "web development",
+        "AI tools",
+        "productivity"
       ]
     },
     {
@@ -24,12 +23,11 @@
       "published_at": "2025-05-23T00:00:00+00:00",
       "source": "OpenAI News",
       "category": "research",
-      "summary": "OpenAI has released an addendum to their o3 and o4-mini system cards, specifically detailing the functionality and operation of the OpenAI o3 Operator.",
+      "summary": "OpenAI released an addendum to their o3 and o4-mini system cards, providing further details on the o3 Operator.",
       "tags": [
-        "OpenAI",
-        "System Card",
-        "o3",
-        "o4-mini"
+        "model updates",
+        "system card",
+        "AI safety"
       ]
     },
     {
@@ -39,12 +37,11 @@
       "published_at": "2025-05-22T23:00:00+00:00",
       "source": "OpenAI News",
       "category": "policy",
-      "summary": "OpenAI has announced the establishment of its new office, OpenAI Deutschland, marking an expansion of its global presence.",
+      "summary": "OpenAI announced its expansion into Germany, establishing a new presence in the country.",
       "tags": [
-        "OpenAI",
+        "global expansion",
         "Germany",
-        "Global Expansion",
-        "Office Opening"
+        "business development"
       ]
     },
     {
@@ -54,12 +51,11 @@
       "published_at": "2025-05-22T10:25:00+00:00",
       "source": "OpenAI News",
       "category": "product",
-      "summary": "OpenAI highlights how tools like Coderabbit are leveraging o3, o4-mini, and GPT-4.1 to significantly accelerate the code shipping process for developers.",
+      "summary": "OpenAI highlights how their o3, o4-mini, and GPT-4.1 models can accelerate code shipping for developers.",
       "tags": [
-        "OpenAI",
-        "Coderabbit",
-        "Code Development",
-        "GPT-4.1"
+        "developer tools",
+        "code generation",
+        "productivity"
       ]
     },
     {
@@ -69,12 +65,109 @@
       "published_at": "2025-05-22T00:00:00+00:00",
       "source": "OpenAI News",
       "category": "policy",
-      "summary": "OpenAI has announced the introduction of Stargate UAE, indicating a new initiative or partnership within the United Arab Emirates.",
+      "summary": "OpenAI announced the introduction of 'Stargate UAE', indicating a new initiative or presence in the United Arab Emirates.",
       "tags": [
-        "OpenAI",
+        "global expansion",
         "UAE",
-        "Partnership",
-        "Global Expansion"
+        "strategic initiatives"
+      ]
+    },
+    {
+      "id": "204b6e144823e80d",
+      "title": "New tools and features in the Responses API",
+      "url": "https://openai.com/index/new-tools-and-features-in-the-responses-api",
+      "published_at": "2025-05-21T08:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "product",
+      "summary": "OpenAI rolled out new tools and features for its Responses API, enhancing its capabilities for developers.",
+      "tags": [
+        "API updates",
+        "developer tools",
+        "product features"
+      ]
+    },
+    {
+      "id": "fc4a1fcfe057ec37",
+      "title": "Sam & Jony introduce io",
+      "url": "https://openai.com/sam-and-jony",
+      "published_at": "2025-05-21T00:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "product",
+      "summary": "Sam Altman and Jony Ive introduced 'io', hinting at a new product or project collaboration.",
+      "tags": [
+        "new product",
+        "collaboration",
+        "innovation"
+      ]
+    },
+    {
+      "id": "183d58a311d515e3",
+      "title": "Addendum to o3 and o4-mini system card: Codex",
+      "url": "https://openai.com/index/o3-o4-mini-codex-system-card-addendum",
+      "published_at": "2025-05-16T08:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "research",
+      "summary": "OpenAI released an addendum to the o3 and o4-mini system cards, specifically detailing aspects related to Codex.",
+      "tags": [
+        "model updates",
+        "Codex",
+        "system card"
+      ]
+    },
+    {
+      "id": "abb942f337e217d5",
+      "title": "Introducing Codex",
+      "url": "https://openai.com/index/introducing-codex",
+      "published_at": "2025-05-16T08:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "product",
+      "summary": "OpenAI officially introduced Codex, an AI model designed to translate natural language into code.",
+      "tags": [
+        "code generation",
+        "developer tools",
+        "AI models"
+      ]
+    },
+    {
+      "id": "ff19993f03e86fca",
+      "title": "AI powers Expedia’s marketing evolution",
+      "url": "https://openai.com/index/expedia-jochen-koedijk",
+      "published_at": "2025-05-14T10:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "product",
+      "summary": "OpenAI highlights how its AI technology is being leveraged by Expedia to evolve its marketing strategies.",
+      "tags": [
+        "AI applications",
+        "marketing",
+        "Expedia"
+      ]
+    },
+    {
+      "id": "eba97d45c48b70ff",
+      "title": "Introducing HealthBench",
+      "url": "https://openai.com/index/healthbench",
+      "published_at": "2025-05-12T10:30:00+00:00",
+      "source": "OpenAI News",
+      "category": "research",
+      "summary": "OpenAI unveiled HealthBench, a new benchmark or initiative focused on AI applications in the healthcare sector.",
+      "tags": [
+        "healthcare AI",
+        "benchmarking",
+        "AI research"
+      ]
+    },
+    {
+      "id": "7e6a1a3777bdb474",
+      "title": "OpenAI Expands Leadership with Fidji Simo",
+      "url": "https://openai.com/index/leadership-expansion-with-fidji-simo",
+      "published_at": "2025-05-07T21:00:00+00:00",
+      "source": "OpenAI News",
+      "category": "culture",
+      "summary": "OpenAI announced the expansion of its leadership team with the addition of Fidji Simo.",
+      "tags": [
+        "leadership",
+        "company news",
+        "appointments"
       ]
     }
   ]
